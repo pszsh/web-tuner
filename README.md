@@ -22,5 +22,9 @@ Edit the `config.json` file to customize your chord generation:
 
 ---
 
-Run python main.py > output.txt, it will be much slower if you don't output it to a file instead of the shell, but if you want to see the debugging messages, just run the command normally. That's all, playable chord shapes from any tuning you put into the config will be generated.
+Run
+```bash
+python main.py > output.txt
+```
+it will be much slower if you don't output it to a file instead of the shell, but if you want to see the debugging messages, just run the command normally. That's all, playable chord shapes from any tuning you put into the config will be generated.
 View them by opening chords.html, which will be generated into www/
