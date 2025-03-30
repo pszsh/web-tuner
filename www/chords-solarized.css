@@ -1,0 +1,113 @@
+body {
+    font-family: "Work Sans", sans-serif;
+    background-color: #002b36; /* Solarized Dark base03 */
+    color: #839496; /* Solarized Dark base0 */
+    padding: 1rem;
+    line-height: 1.5;
+  }
+  
+  #chord-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+  
+  .chord-card {
+    border: 1px solid #073642; /* Solarized Dark base02 */
+    border-radius: 8px;
+    padding: 1rem;
+    background-color: #002b36; /* Solarized Dark base03 - same as body for a subtle card */
+    width: max-content;
+  }
+  
+  .chord-card h2 {
+    margin-top: 0;
+    font-size: 1.2rem;
+    color: #b58900; /* Solarized Dark yellow */
+  }
+  
+  .fretboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    margin-left: .5rem;
+    border: .5px;
+    background-color: #073642; /* Solarized Dark base02 */
+  }
+  
+  .fretboard .fret {
+    background-color: #002b36!important; /* Solarized Dark base03 - same as body */
+  }
+  
+  .fret-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    gap: 2px;
+  }
+  
+  .fret {
+    width: 2.1rem;
+    height: 1.6rem;
+    box-sizing: border-box;
+    border: .5px solid #586e75; /* Solarized Dark base01 */
+    border-left: 2px solid #073642; /* Solarized Dark base02 */
+    border-right: 2px solid #073642; /* Solarized Dark base02 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    text-align: center;
+    line-height: 1.6rem;
+    font-weight: bold;
+    background-color: #073642; /* Solarized Dark base02 */
+    position: relative;
+    color: transparent;
+  }
+  
+  .fret[data-dot]::after {
+    content: '';
+    width: 0.55rem;
+    height: 0.55rem;
+    background-color: #dc322f; /* Solarized Dark red */
+    border: 1px solid #cb4b16; /* Solarized Dark orange border for red dot */
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(220, 50, 47, 0.7);
+    border-color: #cb4b16;
+  }
+  
+  .fret:empty {
+    background-color: #073642; /* Solarized Dark base02 */
+  }
+  
+  .alternatives {
+    margin-top: 1rem;
+  }
+  
+  .alternatives h3 {
+    color: #839496; /* Solarized Dark base0 */
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .alternatives-container {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  .alternative-fretboard {
+    margin-inline: 1.8rem;
+  }
+  
+  .alternative-fretboard .fret {
+    width: 1.8rem;
+    height: 1.3rem;
+  }

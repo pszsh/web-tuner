@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chord Fingering Matches</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <h1>Matched Chord Positions</h1>
+  <div id="chord-container" data-max-fret="{{ max_fret }}" data-num-strings="{{ num_strings }}">
+    {% for match in chords %}
+      <div class="chord-card">
+        <h2>{{ match.chord }}</h2>
+        <div class="fretboard" data-chord="{{ match.chord }}" data-fingering='{{ match.fingering | tojson }}'></div>
+        {% if match.alternatives %}
+        <div class="alternatives">
+          <h3>Alternatives:</h3>
+          <div class="alternatives-container">
+            {% for alt_fingering in match.alternatives %}
+              <div class="fretboard alternative-fretboard" data-chord="{{ match.chord }} (Alternative)" data-fingering='{{ alt_fingering | tojson }}'></div>
+            {% endfor %}
+          </div>
+        </div>
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+  <!-- JavaScript will load config.json to determine string count and tunings, and render fretboards dynamically -->
+  <script src="chords.js"></script>
+</body>
+</html>

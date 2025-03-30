@@ -1,0 +1,6 @@
+{
+  "instrument": "guitar",
+  "tuning": ["E","A","D","G","B","E"],
+  "frets": 4,
+  "max_fingers": 4
+}

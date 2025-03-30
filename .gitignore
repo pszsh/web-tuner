@@ -1,0 +1,6 @@
+config2.json
+output.txt
+generated_data/
+venv/
+__pycache__/
+www/chords.html

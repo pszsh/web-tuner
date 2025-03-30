@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Stringed Instrument Tuner</title>
+    <link rel="stylesheet" href="tuner.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Ukulele Tuner</h1>
+
+        <div class="instrument-select">
+            <label for="instrument">Select Instrument:</label>
+            <select id="instrument">
+                <option value="ukulele">Ukulele</option>
+                <option value="guitar">Guitar</option>
+            </select>
+        </div>
+
+        <div class="tuning-controls">
+            <div class="a440-control">
+                <label for="a440">A4 Reference (Hz):</label>
+                <input type="number" id="a440" value="440">
+            </div>
+            <div class="transpose-control">
+                <label for="transpose">Transpose (Semitones):</label>
+                <input type="number" id="transpose" value="0">
+            </div>
+            
+            <div class="tuning-mode-select">
+                <label for="tuning-mode">Tuning Mode:</label>
+                <select id="tuning-mode">
+                    <option value="equal">Equal Temperament</option>
+                    <option value="harmonic">Harmonic Tuning</option>
+                </select>
+            </div>
+
+            <div class="tuning-select">
+                <label for="tuning">Select Tuning:</label>
+                <select id="tuning">
+                    <!-- Ukulele Tunings -->
+                    <optgroup label="Ukulele Tunings">
+                        <option value="standard">Standard (GCEA)</option>
+                        <option value="slack-key">Slack Key (GCEG)</option>
+                        <option value="low-g">Low G (GCEA - Low G)</option>
+                        <option value="harmonic-minor">Harmonic Minor (G Bb D G)</option>
+                        <option value="suspended-fourth">Suspended Fourth (G C F C)</option>
+                        <option value="lydian">Lydian (G C E F#)</option>
+                        <option value="diminished">Diminished (G B D F)</option>
+                        <option value="augmented">Augmented (G C# E G#)</option>
+                        <option value="open-fifths">Open Fifths (G D A D)</option>
+                        <option value="double-unison">Double Unison (G G C C)</option>
+                        <option value="ionian">Ionian (Major) (G C E A)</option>
+                        <option value="dorian">Dorian (G Bb D A)</option>
+                        <option value="mixo-dorian">Mixo-Dorian (F A# G A)</option>
+                        <option value="phrygian">Phrygian (G Ab D A)</option>
+                        <option value="mixolydian">Mixolydian (G C D A)</option>
+                        <option value="aeolian">Aeolian (Natural Minor) (G Bb D G)</option>
+                        <option value="locrian">Locrian (G Ab C G)</option>
+                    </optgroup>
+                    <!-- Guitar Tunings -->
+                    <optgroup label="Guitar Tunings">
+                        <option value="standard">Standard (EADGBE)</option>
+                        <option value="drop-d">Drop D (DADGBE)</option>
+                        <option value="dadgad">DADGAD</option>
+                        <option value="open-g">Open G (DGDGBD)</option>
+                        <option value="open-d">Open D (DADF#AD)</option>
+                        <option value="open-c">Open C (CGCGCE)</option>
+                        <option value="half-step-down">Half Step Down (Eb Ab Db Gb Bb Eb)</option>
+                        <option value="full-step-down">Full Step Down (D G C F A D)</option>
+                        <option value="double-drop-d">Double Drop D (DADGBD)</option>
+                        <option value="new-standard">New Standard (CGDAEG)</option>
+                        <option value="nashville-high-strung">Nashville High-Strung (EADGBE but high-strung)</option>
+                        <option value="orkney">Orkney (CGDGCD)</option>
+                        <option value="modal-tuning-1">Modal 1 (CGDGBE)</option>
+                        <option value="modal-tuning-2">Modal 2 (EAEAC#E)</option>
+                    </optgroup>
+                </select>
+            </div>
+        </div>
+
+        <div id="strings"></div>
+
+        <button id="play-all">Play All Strings</button>
+
+        <div id="output"></div>
+    </div>
+
+    <script src="http://unpkg.com/tone"></script>
+    <script src="tuner.js"></script>
+</body>
+</html>
