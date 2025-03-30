@@ -21,11 +21,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const themeSelect = document.createElement("select");
   themeSelect.innerHTML = `
-    <option value="light">ðŸŒž Light</option>
-    <option value="default">ðŸŽ¸ Default Theme</option>
-    <option value="solarized">ðŸŒ… Solarized</option>
-    <option value="tomorrow-amoled">ðŸŒŒ Tomorrow AMOLED</option>
-    <option value="darcula">ðŸ§› Darcula</option>
+    <option value="light">Light</option>
+    <option value="default">Purple Theme</option>
+    <option value="solarized">Solarized</option>
+    <option value="tomorrow-amoled">Tomorrow AMOLED</option>
+    <option value="darcula">Darcula</option>
   `;
   controls.appendChild(themeSelect);
 
