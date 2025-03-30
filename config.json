@@ -1,6 +1,6 @@
 {
   "instrument": "guitar",
-  "tuning": ["E","A","D","G","B","E"],
+  "tuning": ["Db","Gb","Db","Ab","Eb","B"],
   "frets": 4,
   "max_fingers": 4
 }
